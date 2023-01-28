@@ -31,7 +31,8 @@
 
         public Sheep()
         {
-
+            SheepIndex = 0;
+            SheepName = string.Empty;
         }
 
         public Sheep(string name)
