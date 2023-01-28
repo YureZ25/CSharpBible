@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MainArgs": {
+      "commandName": "Project",
+      "commandLineArgs": "seat \"i love tanaka\""
+    }
+  }
+}
