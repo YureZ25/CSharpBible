@@ -1,9 +1,11 @@
 ﻿Figure rect;
-rect = new Rectangle { PositionX = 4, PositionY = 6, Height = 4, Width = 8 };
+rect = new Circle { PositionX = 6, PositionY = 3, Radius = 7 };
 rect.Draw();
 
-rect = new Circle { PositionX = 6, PositionY = 18, Radius = 3 };
+rect = new Rectangle { PositionX = 4, PositionY = 22, Height = 4, Width = 8 };
 rect.Draw();
+
+Console.SetCursorPosition(0, 30);
 
 abstract class Figure
 {
@@ -65,27 +67,19 @@ class Circle : Figure
 
     public override void Draw()
     {
-        //Console.SetCursorPosition(PositionX, PositionY);
-        Console.SetCursorPosition(0, PositionY);
+        var list = new List<(int x, int y)>();
 
-        double r_in = Radius - 0.4;
-        double r_out = Radius + 0.4;
-
-        for (double y = Radius; y >= -Radius; y--)
+        for (int x = -Radius; x <= Radius; x++)
         {
-            for (double x = -Radius; x < r_out; x += 0.5)
-            {
-                double val = Math.Pow(x, 2) + Math.Pow(y, 2);
-                if (val >= Math.Pow(r_in, 2) && val <= Math.Pow(r_out, 2))
-                {
-                    Console.Write("*");
-                }
-                else
-                {
-                    Console.Write(" ");
-                }
-            }
-            Console.WriteLine();
+            int y = (int)Math.Sqrt(Math.Pow(Radius, 2) - Math.Pow(x, 2));
+            list.Add((x + Radius + 1, y + Radius + 1));
+            list.Add((x + Radius + 1, -y + Radius + 1));
+        }
+
+        foreach (var (x, y) in list)
+        {
+            Console.SetCursorPosition(x + PositionX, y + PositionY);
+            Console.Write("*");
         }
     }
 }
