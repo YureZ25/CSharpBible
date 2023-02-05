@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Static", "Chapter3-OOP\Stat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Destructor", "Chapter3-OOP\Destructor\Destructor.csproj", "{BA371D53-4FC7-4EAB-B584-81D89B202CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainArgs", "Chapter3-OOP\MainArgs\MainArgs.csproj", "{33675166-B3C4-42BA-99C3-3E3368E5D8E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainArgs", "Chapter3-OOP\MainArgs\MainArgs.csproj", "{33675166-B3C4-42BA-99C3-3E3368E5D8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Chapter3-OOP\Inheritance\Inheritance.csproj", "{295A519D-663C-4F23-8BCB-8E331DEF7113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{33675166-B3C4-42BA-99C3-3E3368E5D8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33675166-B3C4-42BA-99C3-3E3368E5D8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33675166-B3C4-42BA-99C3-3E3368E5D8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{295A519D-663C-4F23-8BCB-8E331DEF7113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295A519D-663C-4F23-8BCB-8E331DEF7113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295A519D-663C-4F23-8BCB-8E331DEF7113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295A519D-663C-4F23-8BCB-8E331DEF7113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{016C6E0A-AAE3-4944-B826-52760E95D7D7} = {E47B5BD6-FB1F-47AB-B3A1-A5B39B5A8257}
 		{BA371D53-4FC7-4EAB-B584-81D89B202CA7} = {E47B5BD6-FB1F-47AB-B3A1-A5B39B5A8257}
 		{33675166-B3C4-42BA-99C3-3E3368E5D8E6} = {E47B5BD6-FB1F-47AB-B3A1-A5B39B5A8257}
+		{295A519D-663C-4F23-8BCB-8E331DEF7113} = {E47B5BD6-FB1F-47AB-B3A1-A5B39B5A8257}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
