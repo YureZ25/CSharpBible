@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastAndConvert", "Chapter5-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enums", "Chapter5-AdvancedDev\Enums\Enums.csproj", "{8248F0C3-8D93-4161-91E5-1D1B0ABF69B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs", "Chapter5-AdvancedDev\Structs\Structs.csproj", "{5C1A35A0-B679-4BDB-83B2-F8052928475C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structs", "Chapter5-AdvancedDev\Structs\Structs.csproj", "{5C1A35A0-B679-4BDB-83B2-F8052928475C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateAndTime", "Chapter5-AdvancedDev\DateAndTime\DateAndTime.csproj", "{F5E33783-128D-467E-9CF3-893C4C698F4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateAndTime", "Chapter5-AdvancedDev\DateAndTime\DateAndTime.csproj", "{F5E33783-128D-467E-9CF3-893C4C698F4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Chapter5-AdvancedDev\Strings\Strings.csproj", "{EF78A5A4-F0B4-4348-9745-C0D65154A376}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{F5E33783-128D-467E-9CF3-893C4C698F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5E33783-128D-467E-9CF3-893C4C698F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5E33783-128D-467E-9CF3-893C4C698F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF78A5A4-F0B4-4348-9745-C0D65154A376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF78A5A4-F0B4-4348-9745-C0D65154A376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF78A5A4-F0B4-4348-9745-C0D65154A376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF78A5A4-F0B4-4348-9745-C0D65154A376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +124,7 @@ Global
 		{8248F0C3-8D93-4161-91E5-1D1B0ABF69B1} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
 		{5C1A35A0-B679-4BDB-83B2-F8052928475C} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
 		{F5E33783-128D-467E-9CF3-893C4C698F4F} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
+		{EF78A5A4-F0B4-4348-9745-C0D65154A376} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
