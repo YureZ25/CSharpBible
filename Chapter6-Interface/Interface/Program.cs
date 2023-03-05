@@ -29,15 +29,15 @@ void PrintBalance(IPurse purse)
 }
 
 
-var investmentPortfolio = new InvestmentPortfolio();
+var deposit = new Deposit();
 
 // Отработает собственный метод класса
-investmentPortfolio.EarnMoney(55);
-PrintBalance(investmentPortfolio);
+deposit.EarnMoney(55);
+PrintBalance(deposit);
 
 // Отработает метод интерфейса
-((IPurse)investmentPortfolio).EarnMoney(30);
-PrintBalance(investmentPortfolio);
+((IPurse)deposit).EarnMoney(30);
+PrintBalance(deposit);
 Console.WriteLine();
 
 // Объект сейфа реализует сразу и ISafe и IPurse

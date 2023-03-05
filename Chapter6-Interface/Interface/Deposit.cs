@@ -1,6 +1,6 @@
 ﻿namespace Interface
 {
-    internal class InvestmentPortfolio : IPurse
+    internal class Deposit : IPurse
     {
         private decimal _balance = 0;
         public decimal Balance => _balance;
