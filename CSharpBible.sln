@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorsOverride", "Chapte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Chapter5-AdvancedDev\Generics\Generics.csproj", "{0C48A79F-43CE-417C-A92D-4C31795E7281}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonAndTuple", "Chapter5-AdvancedDev\AnonAndTuple\AnonAndTuple.csproj", "{9871CE12-E4F8-4BB5-B54D-AF2F705689A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{0C48A79F-43CE-417C-A92D-4C31795E7281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C48A79F-43CE-417C-A92D-4C31795E7281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C48A79F-43CE-417C-A92D-4C31795E7281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9871CE12-E4F8-4BB5-B54D-AF2F705689A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9871CE12-E4F8-4BB5-B54D-AF2F705689A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9871CE12-E4F8-4BB5-B54D-AF2F705689A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9871CE12-E4F8-4BB5-B54D-AF2F705689A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -139,6 +145,7 @@ Global
 		{EF78A5A4-F0B4-4348-9745-C0D65154A376} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
 		{B26BEAA2-9947-4BB8-9D54-E0D453CAE1FD} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
 		{0C48A79F-43CE-417C-A92D-4C31795E7281} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
+		{9871CE12-E4F8-4BB5-B54D-AF2F705689A5} = {841E86DD-341B-405B-B5DE-2BC3FE3DF7AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
