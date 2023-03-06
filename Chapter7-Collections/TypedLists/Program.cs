@@ -1,10 +1,20 @@
-﻿using System.Collections;
+﻿
+var linkedList = new LinkedList<string>(new[] { "Михаил Смирнов", "Сергей Иванов", "Алексей Петров" });
+var currentNode = linkedList.First;
+Console.WriteLine("Двусвязный список:");
+while (currentNode != null)
+{
+    Console.Write(currentNode.Value + "; ");
+    currentNode = currentNode.Next;
+}
+Console.Write("\n\n");
 
-var queue = new Queue();
+
+var queue = new Queue<string>();
 queue.Enqueue("Первый");
-queue.Enqueue(2);
+queue.Enqueue("Второй");
 queue.Enqueue("Третий");
-queue.Enqueue(4);
+queue.Enqueue("Четвертый");
 queue.Enqueue("Пятый");
 queue.Enqueue("Шестой");
 
@@ -17,16 +27,16 @@ do
 Console.WriteLine();
 
 
-var stack = new Stack();
+var stack = new Stack<string>();
 stack.Push("Первый");
-stack.Push(2);
+stack.Push("Второй");
 stack.Push("Третий");
 stack.Push("Четвертый");
-stack.Push(5);
+stack.Push("Пятый");
 stack.Push("Шестой");
 
 Console.WriteLine("Стек:");
-for ( ; stack.Count > 0; )
+for (; stack.Count > 0;)
 {
     var value = stack.Pop();
     Console.WriteLine(value);
@@ -34,7 +44,7 @@ for ( ; stack.Count > 0; )
 Console.WriteLine();
 
 
-var hashtable = new Hashtable
+var dict = new Dictionary<string, Person>
 {
     { "Михаил Смирнов", new Person("Михаил", "Смирнов") },
     { "Сергей Иванов", new Person("Сергей", "Иванов") },
@@ -43,24 +53,23 @@ var hashtable = new Hashtable
 
 Console.WriteLine("Хэштаблица:");
 Console.Write("Значения: ");
-foreach (Person person in hashtable.Values)
+foreach (Person person in dict.Values)
 {
     Console.Write(person.LastName + "; ");
 }
 Console.WriteLine();
 
 Console.Write("Ключи: ");
-foreach(string key in hashtable.Keys)
+foreach (string key in dict.Keys)
 {
     Console.Write(key + "; ");
 }
 Console.WriteLine();
 
 Console.Write("Значения по ключу: ");
-foreach (string key in hashtable.Keys)
+foreach (var (key, value) in dict)
 {
-    var p = (Person?)hashtable[key];
-    Console.Write($"Ключ - {key}, Имя - {p?.FirstName}; ");
+    Console.Write($"Ключ - {key}, Имя - {value?.FirstName}; ");
 }
 Console.WriteLine();
 
