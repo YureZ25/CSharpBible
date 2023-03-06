@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception", "Chapter8-Excep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomExceptions", "Chapter8-Exceptions\CustomExceptions\CustomExceptions.csproj", "{C41F37CE-AF9D-45A1-95BC-32F2170B0D94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overflow", "Chapter8-Exceptions\Overflow\Overflow.csproj", "{55B6928D-4581-4BD4-A933-2327304EF36B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{C41F37CE-AF9D-45A1-95BC-32F2170B0D94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C41F37CE-AF9D-45A1-95BC-32F2170B0D94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C41F37CE-AF9D-45A1-95BC-32F2170B0D94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B6928D-4581-4BD4-A933-2327304EF36B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B6928D-4581-4BD4-A933-2327304EF36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B6928D-4581-4BD4-A933-2327304EF36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B6928D-4581-4BD4-A933-2327304EF36B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -222,6 +228,7 @@ Global
 		{1E4CC3C3-B814-4213-BB02-A76ABF6D82B1} = {F55B490B-EA35-46C9-B08D-1A0978776F1C}
 		{5C216131-0EF6-4CD3-B460-45C3A56FC4E8} = {6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}
 		{C41F37CE-AF9D-45A1-95BC-32F2170B0D94} = {6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}
+		{55B6928D-4581-4BD4-A933-2327304EF36B} = {6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
