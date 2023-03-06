@@ -3,11 +3,14 @@ using SystemArrayList = System.Collections.ArrayList;
 
 namespace ArrayList
 {
-    internal class Person : IEnumerable
+    internal class Person : IEnumerable, IComparable
     {
+        #region ArrayList
         readonly SystemArrayList _children = new SystemArrayList();
         public int ChildrenCount => _children.Count;
+        #endregion
 
+        #region DataProps
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
@@ -16,14 +19,41 @@ namespace ArrayList
             FirstName = firstName;
             LastName = lastName;
         }
+        #endregion
 
+        #region Indexer
         public Person? this[int index] => (Person?)_children[index];
+        #endregion
 
+        #region IEnumerable
         public IEnumerator GetEnumerator()
         {
             return new PersonEnumerator(this);
         }
+        #endregion
 
+        #region IComparable
+        public void SortChildren()
+        {
+            _children.Sort();
+        }
+
+        public void SortChildrenByFirstName()
+        {
+            _children.Sort(new PersonByFirstNameComparer());
+        }
+
+        public int CompareTo(object? other)
+        {
+            if (other is not Person person) return -1;
+
+            int byLastName = LastName.CompareTo(person?.LastName);
+            int byFirstName = FirstName.CompareTo(person?.FirstName);
+            return byLastName != 0 ? byLastName : byFirstName;
+        }
+        #endregion
+
+        #region DataMethods
         public Person? GetChild(int index)
         {
             if (index >= 0 && index < _children.Count)
@@ -45,10 +75,13 @@ namespace ArrayList
                 _children.RemoveAt(index);
             }
         }
+        #endregion
 
+        #region Object
         public override string ToString()
         {
             return $"{FirstName} {LastName}";
         }
+        #endregion
     }
 }
