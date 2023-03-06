@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseArray", "Chapter7-Colle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultirankAndJaggedArray", "Chapter7-Collections\MultirankAndJaggedArray\MultirankAndJaggedArray.csproj", "{772ED3C7-E05F-4854-AAB2-46D17B7E167C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList", "Chapter7-Collections\ArrayList\ArrayList.csproj", "{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,6 +159,10 @@ Global
 		{772ED3C7-E05F-4854-AAB2-46D17B7E167C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{772ED3C7-E05F-4854-AAB2-46D17B7E167C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{772ED3C7-E05F-4854-AAB2-46D17B7E167C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -185,6 +191,7 @@ Global
 		{44936EAA-6E6C-4D86-9A4D-A5C1399DFFD0} = {B58A666A-3F07-4405-A9E2-5185CF5730B6}
 		{749B18EA-2D0F-4379-9E16-E7F9CA7B7AB7} = {F55B490B-EA35-46C9-B08D-1A0978776F1C}
 		{772ED3C7-E05F-4854-AAB2-46D17B7E167C} = {F55B490B-EA35-46C9-B08D-1A0978776F1C}
+		{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2} = {F55B490B-EA35-46C9-B08D-1A0978776F1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
