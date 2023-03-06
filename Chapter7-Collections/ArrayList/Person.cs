@@ -1,8 +1,9 @@
-﻿using SystemArrayList = System.Collections.ArrayList;
+﻿using System.Collections;
+using SystemArrayList = System.Collections.ArrayList;
 
 namespace ArrayList
 {
-    internal class Person
+    internal class Person : IEnumerable
     {
         readonly SystemArrayList _children = new SystemArrayList();
         public int ChildrenCount => _children.Count;
@@ -17,6 +18,11 @@ namespace ArrayList
         }
 
         public Person? this[int index] => (Person?)_children[index];
+
+        public IEnumerator GetEnumerator()
+        {
+            return new PersonEnumerator(this);
+        }
 
         public Person? GetChild(int index)
         {
