@@ -79,6 +79,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Chapter9-Event
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDelegates", "Chapter9-Events\CustomDelegates\CustomDelegates.csproj", "{FBEF03D9-0608-499B-A455-75A23B88A64F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter10-LINQ", "Chapter10-LINQ", "{FC65F5C2-0FE8-4603-AC54-86277DCB22F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Chapter10-LINQ\Linq\Linq.csproj", "{98CDEF85-E976-44F9-A300-925BA3DC719B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +213,10 @@ Global
 		{FBEF03D9-0608-499B-A455-75A23B88A64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBEF03D9-0608-499B-A455-75A23B88A64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBEF03D9-0608-499B-A455-75A23B88A64F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CDEF85-E976-44F9-A300-925BA3DC719B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CDEF85-E976-44F9-A300-925BA3DC719B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CDEF85-E976-44F9-A300-925BA3DC719B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CDEF85-E976-44F9-A300-925BA3DC719B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -245,6 +253,7 @@ Global
 		{55B6928D-4581-4BD4-A933-2327304EF36B} = {6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}
 		{60FA9673-C4CF-4B06-BDF9-AD6723383519} = {310D1AE4-D70F-4A3A-A216-5E279B865711}
 		{FBEF03D9-0608-499B-A455-75A23B88A64F} = {310D1AE4-D70F-4A3A-A216-5E279B865711}
+		{98CDEF85-E976-44F9-A300-925BA3DC719B} = {FC65F5C2-0FE8-4603-AC54-86277DCB22F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
