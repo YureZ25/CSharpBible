@@ -57,21 +57,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter7-Collections", "Cha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseArray", "Chapter7-Collections\BaseArray\BaseArray.csproj", "{749B18EA-2D0F-4379-9E16-E7F9CA7B7AB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultirankAndJaggedArray", "Chapter7-Collections\MultirankAndJaggedArray\MultirankAndJaggedArray.csproj", "{772ED3C7-E05F-4854-AAB2-46D17B7E167C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultirankAndJaggedArray", "Chapter7-Collections\MultirankAndJaggedArray\MultirankAndJaggedArray.csproj", "{772ED3C7-E05F-4854-AAB2-46D17B7E167C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList", "Chapter7-Collections\ArrayList\ArrayList.csproj", "{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayList", "Chapter7-Collections\ArrayList\ArrayList.csproj", "{CC3217AE-3CBE-41E0-9866-5BFEB9EA79C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherLists", "Chapter7-Collections\OtherLists\OtherLists.csproj", "{BF62C175-2FCE-4327-B44F-DB3A0789BF73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtherLists", "Chapter7-Collections\OtherLists\OtherLists.csproj", "{BF62C175-2FCE-4327-B44F-DB3A0789BF73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypedLists", "Chapter7-Collections\TypedLists\TypedLists.csproj", "{1E4CC3C3-B814-4213-BB02-A76ABF6D82B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypedLists", "Chapter7-Collections\TypedLists\TypedLists.csproj", "{1E4CC3C3-B814-4213-BB02-A76ABF6D82B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter8-Exceptions", "Chapter8-Exceptions", "{6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception", "Chapter8-Exceptions\Exception\Exception.csproj", "{5C216131-0EF6-4CD3-B460-45C3A56FC4E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exception", "Chapter8-Exceptions\Exception\Exception.csproj", "{5C216131-0EF6-4CD3-B460-45C3A56FC4E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomExceptions", "Chapter8-Exceptions\CustomExceptions\CustomExceptions.csproj", "{C41F37CE-AF9D-45A1-95BC-32F2170B0D94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomExceptions", "Chapter8-Exceptions\CustomExceptions\CustomExceptions.csproj", "{C41F37CE-AF9D-45A1-95BC-32F2170B0D94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overflow", "Chapter8-Exceptions\Overflow\Overflow.csproj", "{55B6928D-4581-4BD4-A933-2327304EF36B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overflow", "Chapter8-Exceptions\Overflow\Overflow.csproj", "{55B6928D-4581-4BD4-A933-2327304EF36B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter9-Events", "Chapter9-Events", "{310D1AE4-D70F-4A3A-A216-5E279B865711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Chapter9-Events\Delegates\Delegates.csproj", "{60FA9673-C4CF-4B06-BDF9-AD6723383519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +199,10 @@ Global
 		{55B6928D-4581-4BD4-A933-2327304EF36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55B6928D-4581-4BD4-A933-2327304EF36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55B6928D-4581-4BD4-A933-2327304EF36B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FA9673-C4CF-4B06-BDF9-AD6723383519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FA9673-C4CF-4B06-BDF9-AD6723383519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FA9673-C4CF-4B06-BDF9-AD6723383519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FA9673-C4CF-4B06-BDF9-AD6723383519}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -229,6 +237,7 @@ Global
 		{5C216131-0EF6-4CD3-B460-45C3A56FC4E8} = {6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}
 		{C41F37CE-AF9D-45A1-95BC-32F2170B0D94} = {6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}
 		{55B6928D-4581-4BD4-A933-2327304EF36B} = {6EC12837-B2E7-4F69-9F61-51B4F8E6CB6B}
+		{60FA9673-C4CF-4B06-BDF9-AD6723383519} = {310D1AE4-D70F-4A3A-A216-5E279B865711}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
