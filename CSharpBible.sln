@@ -87,9 +87,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqXml", "Chapter10-LINQ\L
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter11-Storage", "Chapter11-Storage", "{838BA862-65AA-4351-B47A-10DF09A7FB93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystem", "Chapter11-Storage\FileSystem\FileSystem.csproj", "{9318D22F-7AE6-48A8-AE52-4E2F67922EF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSystem", "Chapter11-Storage\FileSystem\FileSystem.csproj", "{9318D22F-7AE6-48A8-AE52-4E2F67922EF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFiles", "Chapter11-Storage\TextFiles\TextFiles.csproj", "{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextFiles", "Chapter11-Storage\TextFiles\TextFiles.csproj", "{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlFiles", "Chapter11-Storage\XmlFiles\XmlFiles.csproj", "{82A42327-F6E3-4181-BE96-A74F972C8534}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +239,10 @@ Global
 		{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82A42327-F6E3-4181-BE96-A74F972C8534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A42327-F6E3-4181-BE96-A74F972C8534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A42327-F6E3-4181-BE96-A74F972C8534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A42327-F6E3-4181-BE96-A74F972C8534}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -277,6 +283,7 @@ Global
 		{598CEEC2-AABD-48AC-8957-6A96C240A573} = {FC65F5C2-0FE8-4603-AC54-86277DCB22F7}
 		{9318D22F-7AE6-48A8-AE52-4E2F67922EF1} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 		{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
+		{82A42327-F6E3-4181-BE96-A74F972C8534} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
