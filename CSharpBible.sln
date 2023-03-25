@@ -93,6 +93,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextFiles", "Chapter11-Stor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlFiles", "Chapter11-Storage\XmlFiles\XmlFiles.csproj", "{82A42327-F6E3-4181-BE96-A74F972C8534}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryFile", "Chapter11-Storage\MemoryFile\MemoryFile.csproj", "{2C668856-5A1A-43EA-B237-85DFE3648593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +245,10 @@ Global
 		{82A42327-F6E3-4181-BE96-A74F972C8534}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82A42327-F6E3-4181-BE96-A74F972C8534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82A42327-F6E3-4181-BE96-A74F972C8534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C668856-5A1A-43EA-B237-85DFE3648593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C668856-5A1A-43EA-B237-85DFE3648593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C668856-5A1A-43EA-B237-85DFE3648593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C668856-5A1A-43EA-B237-85DFE3648593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -284,6 +290,7 @@ Global
 		{9318D22F-7AE6-48A8-AE52-4E2F67922EF1} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 		{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 		{82A42327-F6E3-4181-BE96-A74F972C8534} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
+		{2C668856-5A1A-43EA-B237-85DFE3648593} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
