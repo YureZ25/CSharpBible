@@ -42,6 +42,7 @@ namespace XmlFiles
             try
             {
                 rose.Name = tr?.GetAttribute(nameof(Name)) ?? string.Empty;
+                // Чтение аттрибута возвращает строку - нужно конвертировать
                 rose.X = Convert.ToInt32(tr?.GetAttribute(nameof(X)));
                 rose.Y = Convert.ToInt32(tr?.GetAttribute(nameof(Y)));
                 rose.Width = Convert.ToInt32(tr?.GetAttribute(nameof(Width)));

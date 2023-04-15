@@ -48,6 +48,7 @@ void SaveListToFile(string path, IList<string> list)
         {
             sw.WriteLine(item);
         }
-        sw.Close();
+        // При использовании using не нужно вызывать этот метод
+        //sw.Close();
     }
 }
