@@ -99,6 +99,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter12-MultiThreading", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Chapter12-MultiThreading\Threads\Threads.csproj", "{D1164E7B-310F-4CA2-A389-7190560AEFE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrency", "Chapter12-MultiThreading\Concurrency\Concurrency.csproj", "{D5A0671C-7D20-422C-A26C-E53BE9E23181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -257,6 +259,10 @@ Global
 		{D1164E7B-310F-4CA2-A389-7190560AEFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1164E7B-310F-4CA2-A389-7190560AEFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1164E7B-310F-4CA2-A389-7190560AEFE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A0671C-7D20-422C-A26C-E53BE9E23181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A0671C-7D20-422C-A26C-E53BE9E23181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A0671C-7D20-422C-A26C-E53BE9E23181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A0671C-7D20-422C-A26C-E53BE9E23181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -300,6 +306,7 @@ Global
 		{82A42327-F6E3-4181-BE96-A74F972C8534} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 		{2C668856-5A1A-43EA-B237-85DFE3648593} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 		{D1164E7B-310F-4CA2-A389-7190560AEFE6} = {B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}
+		{D5A0671C-7D20-422C-A26C-E53BE9E23181} = {B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
