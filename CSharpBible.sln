@@ -91,9 +91,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSystem", "Chapter11-Sto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextFiles", "Chapter11-Storage\TextFiles\TextFiles.csproj", "{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlFiles", "Chapter11-Storage\XmlFiles\XmlFiles.csproj", "{82A42327-F6E3-4181-BE96-A74F972C8534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlFiles", "Chapter11-Storage\XmlFiles\XmlFiles.csproj", "{82A42327-F6E3-4181-BE96-A74F972C8534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryFile", "Chapter11-Storage\MemoryFile\MemoryFile.csproj", "{2C668856-5A1A-43EA-B237-85DFE3648593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryFile", "Chapter11-Storage\MemoryFile\MemoryFile.csproj", "{2C668856-5A1A-43EA-B237-85DFE3648593}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter12-MultiThreading", "Chapter12-MultiThreading", "{B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Chapter12-MultiThreading\Threads\Threads.csproj", "{D1164E7B-310F-4CA2-A389-7190560AEFE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +253,10 @@ Global
 		{2C668856-5A1A-43EA-B237-85DFE3648593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C668856-5A1A-43EA-B237-85DFE3648593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C668856-5A1A-43EA-B237-85DFE3648593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1164E7B-310F-4CA2-A389-7190560AEFE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1164E7B-310F-4CA2-A389-7190560AEFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1164E7B-310F-4CA2-A389-7190560AEFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1164E7B-310F-4CA2-A389-7190560AEFE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -291,6 +299,7 @@ Global
 		{3C90F9C4-9F1F-40E5-90AD-A480CC36C9C4} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 		{82A42327-F6E3-4181-BE96-A74F972C8534} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
 		{2C668856-5A1A-43EA-B237-85DFE3648593} = {838BA862-65AA-4351-B47A-10DF09A7FB93}
+		{D1164E7B-310F-4CA2-A389-7190560AEFE6} = {B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
