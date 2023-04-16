@@ -97,13 +97,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryFile", "Chapter11-Sto
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter12-MultiThreading", "Chapter12-MultiThreading", "{B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Chapter12-MultiThreading\Threads\Threads.csproj", "{D1164E7B-310F-4CA2-A389-7190560AEFE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threads", "Chapter12-MultiThreading\Threads\Threads.csproj", "{D1164E7B-310F-4CA2-A389-7190560AEFE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concurrency", "Chapter12-MultiThreading\Concurrency\Concurrency.csproj", "{D5A0671C-7D20-422C-A26C-E53BE9E23181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Concurrency", "Chapter12-MultiThreading\Concurrency\Concurrency.csproj", "{D5A0671C-7D20-422C-A26C-E53BE9E23181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPool", "Chapter12-MultiThreading\ThreadPool\ThreadPool.csproj", "{AFD096C1-7464-4D4C-88EA-48EC1F523C3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadPool", "Chapter12-MultiThreading\ThreadPool\ThreadPool.csproj", "{AFD096C1-7464-4D4C-88EA-48EC1F523C3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "Chapter12-MultiThreading\AsyncAwait\AsyncAwait.csproj", "{51AEF565-C1D9-47EF-B73F-CDF5D93DE2DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncAwait", "Chapter12-MultiThreading\AsyncAwait\AsyncAwait.csproj", "{51AEF565-C1D9-47EF-B73F-CDF5D93DE2DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LongAsync", "Chapter12-MultiThreading\LongAsync\LongAsync.csproj", "{08341D09-FAE5-4C5D-9366-F100B07345AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -275,6 +277,10 @@ Global
 		{51AEF565-C1D9-47EF-B73F-CDF5D93DE2DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51AEF565-C1D9-47EF-B73F-CDF5D93DE2DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51AEF565-C1D9-47EF-B73F-CDF5D93DE2DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08341D09-FAE5-4C5D-9366-F100B07345AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08341D09-FAE5-4C5D-9366-F100B07345AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08341D09-FAE5-4C5D-9366-F100B07345AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08341D09-FAE5-4C5D-9366-F100B07345AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -321,6 +327,7 @@ Global
 		{D5A0671C-7D20-422C-A26C-E53BE9E23181} = {B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}
 		{AFD096C1-7464-4D4C-88EA-48EC1F523C3A} = {B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}
 		{51AEF565-C1D9-47EF-B73F-CDF5D93DE2DE} = {B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}
+		{08341D09-FAE5-4C5D-9366-F100B07345AD} = {B12E0CAE-DAD3-4389-8991-3ECAA1BE4BEE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
