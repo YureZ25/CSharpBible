@@ -22,10 +22,18 @@ string content;
 // По поведению одинаков с ContinueWith((t) => content = t.Result)
 // Не лучший вариант, лучше использовать await
 // Подробнее об этом https://habr.com/ru/articles/482354/
+// Основное предназначение - не менять контекст (поток) после выхода из async функции
 //content = asyncTask.ConfigureAwait(false).GetAwaiter().GetResult();
 
+Console.WriteLine($"Номер потока до await: {Thread.CurrentThread.ManagedThreadId}"); // Допустим 1
+
 // Нормальное использование задачи с await
+// При этом захватывается контекст (поток) async функции
+// И следующий код выполняется в новом потоке
 content = await asyncTask;
+
+// Если await - 7, если ConfigureAwait(false) - 1
+Console.WriteLine($"Номер потока после await: {Thread.CurrentThread.ManagedThreadId}");
 
 Console.WriteLine($"Состояние задачи: {asyncTask.Status}");
 Console.WriteLine($"Данные с сайта: \n{content}");
@@ -41,7 +49,11 @@ async Task<string> AccessTheWebAsync()
 {
     var httpClient = new HttpClient();
 
-    var getTask = httpClient.GetStringAsync("http://www.flenov.info/robots.txt");
+    Console.WriteLine($"Номер потока в функции до await: {Thread.CurrentThread.ManagedThreadId}"); // Допустим 1
 
-    return await getTask;
+    var content = await httpClient.GetStringAsync("http://www.flenov.info/robots.txt");
+
+    Console.WriteLine($"Номер потока в функции после await: {Thread.CurrentThread.ManagedThreadId}"); // Добустим 7
+
+    return content;
 }
