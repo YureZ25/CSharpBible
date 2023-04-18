@@ -1,0 +1,20 @@
+﻿@model Views.ViewModels.Person // Указываем для приведения переденного объекта представления к конктерному типу
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Person</title>
+</head>
+<body>
+    <h3>Me:</h3>
+    @*Потом можем обращатся к свойствам модели*@
+    <p>First name: @Model.FirstName</p>
+    <p>Last name: @Model.LastName</p>
+    <p>Age: @Model.Age</p>
+</body>
+</html>
