@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ThreadPool": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:4415;http://localhost:4416"
+    }
+  }
+}

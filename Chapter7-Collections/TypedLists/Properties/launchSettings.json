@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "TypedLists": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:4400;http://localhost:4401"
+    }
+  }
+}

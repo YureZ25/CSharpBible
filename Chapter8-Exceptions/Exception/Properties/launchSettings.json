@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Exception": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:4402;http://localhost:4403"
+    }
+  }
+}

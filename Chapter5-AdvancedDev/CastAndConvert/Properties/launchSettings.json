@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "CastAndConvert": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:4393;http://localhost:4394"
+    }
+  }
+}
