@@ -1,0 +1,20 @@
+﻿
+@try
+{
+    var x = int.Parse("err");
+}
+catch (Exception ex)
+{
+    <p>Произошла ошибка <q>@ex.Message</q></p>
+}
+finally
+{
+    <p>Мы попали в finally</p>
+}
+
+@*Используем HTML helper для создания объекта MvcForm, 
+который реализует IDisposable*@
+@using (Html.BeginForm())
+{
+    <p>Тут поля формы...</p>
+}

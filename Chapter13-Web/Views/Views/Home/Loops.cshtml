@@ -1,0 +1,46 @@
+﻿@using Views.ViewModels @*Так можно подключить пространтсво имен*@
+
+@model Person[]
+
+<h2>Цикл for:</h2>
+<ul>
+    @for (int i = 0; i < Model.Length; i++)
+    {
+        <li>@Model[i].FirstName @Model[i].LastName (@Model[i].Age) </li>
+    }
+</ul>
+
+<h2>Цикл foreach:</h2>
+<ul>
+    @foreach (var person in Model)
+    {
+        <li>@person.FirstName @person.LastName (@person.Age)</li>
+    }
+</ul>
+
+@{
+    var enumerator = Model.GetEnumerator();
+}
+<h2>Цикл while:</h2>
+<ul>
+    @while (enumerator.MoveNext())
+    {
+        var current = (Person)enumerator.Current;
+        <li>@current.FirstName @current.LastName (@current.Age)</li>
+    }
+</ul>
+
+<h2>Цикл do..while:</h2>
+<ul>
+@{
+    enumerator.Reset();
+    enumerator.MoveNext();
+
+    // Обратный синтаксис, перед do нет @
+    do
+    {
+        var current = (Person)enumerator.Current;
+        <li>@current.FirstName @current.LastName (@current.Age)</li>
+    } while (enumerator.MoveNext());
+}
+</ul>

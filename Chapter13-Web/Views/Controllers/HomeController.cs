@@ -25,5 +25,29 @@ namespace Views.Controllers
             // Представление исчется по стандартной схеме
             return View(me);
         }
+
+        public IActionResult ConditionalOperators()
+        {
+            return View();
+        }
+
+        public IActionResult Loops()
+        {
+            var list = new Person[]
+            {
+                new("Yura", "Nikitin", 25),
+                new("Tanya", "Prokopenko", 21),
+                new("Mikhail", "Flenov", 42),
+                new("Ivan", "Sergeev", 29),
+                new("Lena", "Petrova", 19),
+            };
+
+            return View(list);
+        }
+
+        public IActionResult Etc()
+        {
+            return View();
+        }
     }
 }
