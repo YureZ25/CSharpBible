@@ -26,9 +26,10 @@ namespace Controllers.Controllers
             return Content($"Here is product with id = {id}");
         }
 
-        // Это action будет корректно принимать returnUrl только с шаблоном маршрутизации withReturn
-        // Но вызвать его можно и с дефолтным шаблоном, так что аккуратнее
-        public IActionResult EmailLink(string returnUrl)
+        // Это action будет принимать returnUrl из параметров пути только с шаблоном маршрутизации withReturn
+        // Но вызвать его можно и с дефолтным шаблоном, но в этом случае returnUrl он будет
+        // принимать из параметров запроса, так что аккуратнее, лучше помечать параметры аттрибутом
+        public IActionResult EmailLink([FromRoute] string returnUrl)
         {
             return Content($"www.somedomain.com/email?returnUrl={returnUrl}");
         }

@@ -113,7 +113,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstWeb", "Chapter13-Web\F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controllers", "Chapter13-Web\Controllers\Controllers.csproj", "{62F68F05-9478-4666-A368-D324DF8C89EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Chapter13-Web\Views\Views.csproj", "{C93C9FE0-4CD6-4695-9540-515702DC3760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Views", "Chapter13-Web\Views\Views.csproj", "{C93C9FE0-4CD6-4695-9540-515702DC3760}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Layouts", "Chapter13-Web\LayoutsAndComponents\Layouts.csproj", "{48CB5892-3FDA-4C18-B85E-07D486E19652}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -301,6 +303,10 @@ Global
 		{C93C9FE0-4CD6-4695-9540-515702DC3760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C93C9FE0-4CD6-4695-9540-515702DC3760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C93C9FE0-4CD6-4695-9540-515702DC3760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48CB5892-3FDA-4C18-B85E-07D486E19652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CB5892-3FDA-4C18-B85E-07D486E19652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CB5892-3FDA-4C18-B85E-07D486E19652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CB5892-3FDA-4C18-B85E-07D486E19652}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -351,6 +357,7 @@ Global
 		{51E16F7C-F256-4AC7-AE4C-BE8F8A9AD620} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 		{62F68F05-9478-4666-A368-D324DF8C89EB} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 		{C93C9FE0-4CD6-4695-9540-515702DC3760} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
+		{48CB5892-3FDA-4C18-B85E-07D486E19652} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}

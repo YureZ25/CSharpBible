@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title> @*Модель передать в шаблон нельзя, так что использование ViewBag оправдано*@
+</head>
+<body>
+    @*Разумеется стили нужно писать в отдельном файле, здесь это просто для примера*@
+    <header style="background:#eee; font-size:200%; padding:30px">
+        Типа лого
+    </header>
+    <div>
+        @RenderBody() @*Здесь будет содержимое View использующего этот шаблон*@
+    </div>
+    <footer style="background:#eee; padding:30px">
+        Copyright: yurez.com
+    </footer>
+</body>
+</html>
