@@ -1,0 +1,12 @@
+﻿@model PartialViews.ViewModels.Person[]
+
+@{
+}
+
+<ol>
+    @foreach (var person in Model)
+    {
+        @*@Html.Partial("_Item", person);*@ @*VS говорит, что лучше использовать async версию, эта может привести к дэдлоку*@
+        @await Html.PartialAsync("_Item", person);
+    }
+</ol>

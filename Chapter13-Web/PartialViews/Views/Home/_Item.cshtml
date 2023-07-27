@@ -1,0 +1,10 @@
+﻿@model PartialViews.ViewModels.Person
+
+<li>
+    First Name: @Model.FirstName;
+    Last Name: @Model.LastName;
+    Age: @Model.Age
+</li>
+
+@*Можно встроить Partial View в Partial View (мем с мониторами)*@
+@await Html.PartialAsync("_Ad", "Пылесос 3000")

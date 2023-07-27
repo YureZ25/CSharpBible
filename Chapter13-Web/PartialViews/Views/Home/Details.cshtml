@@ -1,0 +1,13 @@
+﻿@model PartialViews.ViewModels.Person
+
+<h4>Подробная информация о человеке</h4>
+@{
+    // Можно использовать RenderPartial для вызова отображения содержимого из C# кода
+    await Html.RenderPartialAsync("_Item", Model);
+}
+
+@*Это работать не будет, т.к. метод ничего не возвращает, а значит @ не может вставить это на страницу*@
+@*@Html.RenderPartial("_Item", Model) *@
+
+@*Можно встраивать так же в шаблоны (layout) и любые другие cshtml страницы*@
+@await Html.PartialAsync("_Ad", "Блендер 9000");
