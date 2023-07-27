@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header style="background:#eee; padding:30px">
+        <div style="font-size:200%">Типа лого</div>
+
+        @*Компоненты можно исопользовать в любом cshtml, но особенно это удобно там, куда не получиться передать данные для отображения*@
+
+        @*Так можно вызвать компонент с некими аргуметами, с которыми будет вызван метод Invoke*@
+        @*@await Component.InvokeAsync("User", new { userName = "yurez" })*@
+
+        @*Можно не полагаться на рефлексию (поиск класса с постфиксом ViewComponent и с методом Invoke()), а передавать тип компонента напрямую*@
+        @*@await Component.InvokeAsync(typeof(Components.Components.UserViewComponent), new { userName = "yurez" })*@
+
+        @*Это более современный метод использования компонентов с помощью тэг хелпера
+        Плюс в том, что названия компонента и его аргументов генерируются - строгая типизация*@
+        <vc:user user-name="yurex" />
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer style="background:#eee; padding:30px">
+        Copyright: yurez.com
+    </footer>
+</body>
+</html>
