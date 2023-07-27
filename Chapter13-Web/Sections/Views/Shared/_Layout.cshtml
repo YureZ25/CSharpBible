@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header style="background:#eee; padding:30px">
+        <div style="font-size:200%" onclick="sectionAlert()" title="Нажми на меня">Типа лого</div>
+
+        @*При таком вызове даже если секции не найдется - исключение выбрашено не будет*@
+        @RenderSection("WrongSection", required: false)
+        @*По умолчанию required: true*@
+        @RenderSection("Head")
+    </header>
+    <div>
+        @RenderBody()
+
+        <p>Секции дают возможность вставить несколько кусков страницы с отображаемого view</p>
+    </div>
+    <footer style="background:#eee; padding:30px">
+        Copyright: yurez.com
+    </footer>
+    @RenderSection("Scripts")
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿<h3>It's sections Homepage</h3>
+
+@*Синтаксис секций @section [название_секции] { cshtml код }*@
+
+@section Head {
+    <p>Этот текст отьрисован в секции из представления</p>
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        function sectionAlert() {
+            alert('Этот метод в секции из педставления был вызван из шаблона');
+        }
+    </script>
+}
