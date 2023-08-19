@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link rel="stylesheet" href="/css/stylesheet.css" />
+    </head>
+    <body>
+        <header>
+            <span class="logo">LOGO</span>
+            <span class="menu">
+                <a href="/Home">Home</a>
+                <a href="/Auth/Login">Login</a>
+            </span>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+            Made by YureZ
+        </footer>
+    </body>
+</html>

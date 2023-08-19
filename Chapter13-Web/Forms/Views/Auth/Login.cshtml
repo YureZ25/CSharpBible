@@ -1,0 +1,25 @@
+﻿@model LoginVM
+
+<h3>Login here, please</h3>
+
+@*Реализация формы через хелперы. Не особо униврсальный подход...*@
+@*@using (Html.BeginForm())
+{
+    <label class="login-label">Email</label>
+    @Html.TextBoxFor(m => m.Email)
+    <br />
+    <label class="login-label">Password</label>
+    @Html.PasswordFor(m => m.Password)
+    <br />
+    <button>Login</button>
+}*@
+
+<form method="post" action="login"> @*Можно указать абсолютный путь к эндпоинту action="/auth/login" *@
+    <label class="login-label">Email</label>
+    <input name="email" value="@Model?.Email" /> @*Если указать type="email" - будет работать встроенная валидация*@
+    <br />
+    <label class="login-label">Password</label>
+    <input type="password" name="password" value="@Model?.Password" />
+    <br />
+    <button type="submit">Login</button> @*type="submit" - по умолчанию*@
+</form>
