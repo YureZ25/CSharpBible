@@ -17,9 +17,12 @@
 <form method="post" action="login"> @*Можно указать абсолютный путь к эндпоинту action="/auth/login" *@
     <label class="login-label">Email</label>
     <input name="email" value="@Model?.Email" /> @*Если указать type="email" - будет работать встроенная валидация*@
+    @Html.ValidationMessageFor(m => m.Email)
     <br />
     <label class="login-label">Password</label>
     <input type="password" name="password" value="@Model?.Password" />
+    @Html.ValidationMessageFor(m => m.Password) @*Здесь будут label для отображения ошибок валидации этого поля*@
     <br />
-    <button type="submit">Login</button> @*type="submit" - по умолчанию*@
+    @Html.ValidationSummary() @*А здесь список всех ошибок валидации*@
+    <button type="submit">Войти</button> @*type="submit" - по умолчанию*@
 </form>

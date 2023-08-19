@@ -15,6 +15,10 @@ namespace Forms.Controllers
         [HttpPost]
         public IActionResult Login([FromForm] LoginVM loginVM)
         {
+            if (ModelState.IsValid)
+            {
+                return Redirect("/"); // Если прошло валидацию перекидываем на главную
+            }
             ViewBag.Title = "POST Login";
             return View(loginVM);
         }
