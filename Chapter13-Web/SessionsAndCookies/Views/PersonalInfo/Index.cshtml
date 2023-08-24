@@ -1,0 +1,24 @@
+﻿@model SessionsAndCookies.ViewModels.PersonVM
+
+@{
+    // Берем данные из куков клиента
+    Context.Request.Cookies.TryGetValue(nameof(Model.Email), out var email);
+}
+
+<form method="post"> @* Если не указать method, то будет отправлено на тот же url на котором страница *@
+    <label>Email:</label>
+    <input type="text" name="@nameof(Model.Email)" value="@(Model?.Email ?? email)" />
+    <label>Запомнить email</label>
+    <input type="checkbox" name="RememberEmail" />
+    <label>Имя:</label>
+    <input type="text" name="@nameof(Model.FirstName)" value="@Model?.FirstName" />
+    <label>Фамилия:</label>
+    <input type="text" name="@nameof(Model.LastName)" value="@Model?.LastName" />
+    <label>Возраст:</label>
+    <input type="number" name="@nameof(Model.Age)" value="@Model?.Age" />
+    <button>Сохранить</button>
+</form>
+
+<form method="post" action="/PersonalInfo/Clean">
+    <button>Очистить данные</button>
+</form>

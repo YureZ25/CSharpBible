@@ -123,7 +123,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Components", "Chapter13-Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sections", "Chapter13-Web\Sections\Sections.csproj", "{279616D8-2BCB-4CEF-8821-D7F794BBDD16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms", "Chapter13-Web\Forms\Forms.csproj", "{69A86F30-C2BB-4609-9BBC-611A5F03FE03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms", "Chapter13-Web\Forms\Forms.csproj", "{69A86F30-C2BB-4609-9BBC-611A5F03FE03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionsAndCookies", "Chapter13-Web\SessionsAndCookies\SessionsAndCookies.csproj", "{9789EB60-B71F-403C-977C-FB70721C0DAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -331,6 +333,10 @@ Global
 		{69A86F30-C2BB-4609-9BBC-611A5F03FE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A86F30-C2BB-4609-9BBC-611A5F03FE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A86F30-C2BB-4609-9BBC-611A5F03FE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9789EB60-B71F-403C-977C-FB70721C0DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9789EB60-B71F-403C-977C-FB70721C0DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9789EB60-B71F-403C-977C-FB70721C0DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9789EB60-B71F-403C-977C-FB70721C0DAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -386,6 +392,7 @@ Global
 		{C3701071-C731-45FA-A990-B1F190504103} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 		{279616D8-2BCB-4CEF-8821-D7F794BBDD16} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 		{69A86F30-C2BB-4609-9BBC-611A5F03FE03} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
+		{9789EB60-B71F-403C-977C-FB70721C0DAB} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
