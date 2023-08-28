@@ -131,6 +131,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter14-ManagedCode", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferenceAndValueTypes", "Chapter14-ManagedCode\ReferenceAndValueTypes\ReferenceAndValueTypes.csproj", "{E8CC48E7-AC62-4AD6-8261-35DC1E4DA24A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnsafeCode", "Chapter14-ManagedCode\UnsafeCode\UnsafeCode.csproj", "{10222899-1CF0-48FB-A11E-A3576BCAE5DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -345,6 +347,10 @@ Global
 		{E8CC48E7-AC62-4AD6-8261-35DC1E4DA24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8CC48E7-AC62-4AD6-8261-35DC1E4DA24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8CC48E7-AC62-4AD6-8261-35DC1E4DA24A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10222899-1CF0-48FB-A11E-A3576BCAE5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10222899-1CF0-48FB-A11E-A3576BCAE5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10222899-1CF0-48FB-A11E-A3576BCAE5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10222899-1CF0-48FB-A11E-A3576BCAE5DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -402,6 +408,7 @@ Global
 		{69A86F30-C2BB-4609-9BBC-611A5F03FE03} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 		{9789EB60-B71F-403C-977C-FB70721C0DAB} = {91D48119-CD10-4B46-817D-3F7774F4F56F}
 		{E8CC48E7-AC62-4AD6-8261-35DC1E4DA24A} = {BF11E0EA-DBE7-4160-8259-ACAFFBC492FD}
+		{10222899-1CF0-48FB-A11E-A3576BCAE5DB} = {BF11E0EA-DBE7-4160-8259-ACAFFBC492FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
