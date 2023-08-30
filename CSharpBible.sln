@@ -133,9 +133,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReferenceAndValueTypes", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnsafeCode", "Chapter14-ManagedCode\UnsafeCode\UnsafeCode.csproj", "{10222899-1CF0-48FB-A11E-A3576BCAE5DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memory", "Chapter14-ManagedCode\Memory\Memory.csproj", "{69334C09-D4AC-4F7D-8D61-28D065901D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memory", "Chapter14-ManagedCode\Memory\Memory.csproj", "{69334C09-D4AC-4F7D-8D61-28D065901D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalFunctions", "Chapter14-ManagedCode\ExternalFunctions\ExternalFunctions.csproj", "{A0D344C9-2D36-4369-A80D-8FC828D53158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExternalFunctions", "Chapter14-ManagedCode\ExternalFunctions\ExternalFunctions.csproj", "{A0D344C9-2D36-4369-A80D-8FC828D53158}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter15-DataBase", "Chapter15-DataBase", "{D2E8D694-1D75-439B-89BE-C89EAFD7DF48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNet", "Chapter15-DataBase\AdoNet\AdoNet.csproj", "{35F891F2-B310-4353-AAF9-8208345DEAAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -363,6 +367,10 @@ Global
 		{A0D344C9-2D36-4369-A80D-8FC828D53158}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0D344C9-2D36-4369-A80D-8FC828D53158}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0D344C9-2D36-4369-A80D-8FC828D53158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F891F2-B310-4353-AAF9-8208345DEAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F891F2-B310-4353-AAF9-8208345DEAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F891F2-B310-4353-AAF9-8208345DEAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F891F2-B310-4353-AAF9-8208345DEAAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -423,6 +431,7 @@ Global
 		{10222899-1CF0-48FB-A11E-A3576BCAE5DB} = {BF11E0EA-DBE7-4160-8259-ACAFFBC492FD}
 		{69334C09-D4AC-4F7D-8D61-28D065901D98} = {BF11E0EA-DBE7-4160-8259-ACAFFBC492FD}
 		{A0D344C9-2D36-4369-A80D-8FC828D53158} = {BF11E0EA-DBE7-4160-8259-ACAFFBC492FD}
+		{35F891F2-B310-4353-AAF9-8208345DEAAB} = {D2E8D694-1D75-439B-89BE-C89EAFD7DF48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CCCCE95-5739-4F75-92EF-3DC588778E7B}
