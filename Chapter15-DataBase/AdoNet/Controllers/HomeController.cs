@@ -1,4 +1,5 @@
-﻿using AdoNet.Model.DbConnection.Interfaces;
+﻿using AdoNet.Model.DataModels;
+using AdoNet.Model.DbConnection.Interfaces;
 using AdoNet.Model.Providers.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -42,6 +43,28 @@ namespace AdoNet.Controllers
             using var connection = _connectionFactory.CreateConnection();
 
             return Ok(connection.State.ToString());
+        }
+
+        [HttpGet("/Home/Edit/{cityId}")]
+        public async Task<IActionResult> Edit([FromRoute] int cityId)
+        {
+            return View(await _cityProvider.GetCity(cityId));
+        }
+
+        [HttpPost("/Home/Edit")]
+        public async Task<IActionResult> Edit([FromForm] City city)
+        {
+            await _cityProvider.UpdateCity(city);
+
+            return Redirect("/");
+        }
+
+        [HttpPost("/Home/Delete/{cityId}")]
+        public async Task<IActionResult> Delete([FromRoute] int cityId)
+        {
+            await _cityProvider.DeleteCity(cityId);
+
+            return Redirect("/");
         }
     }
 }

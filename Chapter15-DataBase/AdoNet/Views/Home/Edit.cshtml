@@ -1,0 +1,10 @@
+﻿@model AdoNet.Model.DataModels.City
+
+<form method="post" action="/Home/Edit">
+    <input type="hidden" name="@nameof(Model.CityId)" value="@Model.CityId" />
+
+    <label>Город</label>
+    <input type="text" name="@nameof(Model.CityName)" value="@Model.CityName" />
+
+    <button>Сохранить</button>
+</form>

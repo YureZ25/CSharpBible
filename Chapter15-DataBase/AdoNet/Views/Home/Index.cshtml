@@ -6,6 +6,10 @@
 <ul>
     @foreach (var city in Model)
     {
-        <li>@city.CityName</li>
+        <li>
+            <span>@city.CityName</span>
+            <span><a href="/Home/Edit/@city.CityId">Редактировать</a></span>
+            <span><form method="post" action="/Home/Delete/@city.CityId"><button>Удалить</button></form></span>
+        </li>
     }
 </ul>
