@@ -14,11 +14,12 @@ namespace AdoNet.Model.DbConnection
 
         public SqlConnection CreateConnection()
         {
+            // Берем строку подключения из конфигурации
             var connectionStr = _configuration.GetConnectionString("LocalSqlServer");
 
-            var connection = new SqlConnection(connectionStr);
+            var connection = new SqlConnection(connectionStr); // Создаем объект подключения
 
-            connection.Open();
+            connection.Open(); // Окрываем подключение к БД
 
             return connection;
         }
