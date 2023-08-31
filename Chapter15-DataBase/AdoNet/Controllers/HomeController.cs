@@ -1,4 +1,5 @@
-﻿using AdoNet.Model.Interfaces;
+﻿using AdoNet.Model.DbConnection.Interfaces;
+using AdoNet.Model.Providers.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 
@@ -7,15 +8,19 @@ namespace AdoNet.Controllers
     public class HomeController : Controller
     {
         private readonly IDbConnectionFactory _connectionFactory;
+        private readonly ICityProvider _cityProvider;
 
-        public HomeController(IDbConnectionFactory connectionFactory)
+        public HomeController(IDbConnectionFactory connectionFactory, ICityProvider cityProvider)
         {
             _connectionFactory = connectionFactory;
+            _cityProvider = cityProvider;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var cities = await _cityProvider.GetCities();
+
+            return View(cities); // Передача view доменной модели - не лучшая идея, лучше использовать ViewModel (DTO)
         }
 
         // Технически мы можем открыть соединение прямо из контроллера, но так лучше не делать

@@ -1,7 +1,7 @@
-﻿using AdoNet.Model.Interfaces;
+﻿using AdoNet.Model.DbConnection.Interfaces;
 using Microsoft.Data.SqlClient;
 
-namespace AdoNet.Model
+namespace AdoNet.Model.DbConnection
 {
     public class DbConnectionFactory : IDbConnectionFactory
     {

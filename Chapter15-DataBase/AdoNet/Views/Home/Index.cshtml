@@ -1,1 +1,11 @@
-﻿<h3>Это домашняя страница, и она работает)</h3>
+﻿@model IEnumerable<AdoNet.Model.DataModels.City>
+
+<h3>Это домашняя страница, и она работает)</h3>
+
+<h5>Список городов</h5>
+<ul>
+    @foreach (var city in Model)
+    {
+        <li>@city.CityName</li>
+    }
+</ul>
