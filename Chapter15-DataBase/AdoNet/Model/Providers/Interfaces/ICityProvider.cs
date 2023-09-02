@@ -8,6 +8,8 @@ namespace AdoNet.Model.Providers.Interfaces
 
         Task<City?> GetCity(int cityId);
 
+        Task<City> InsertCity(string cityName);
+
         Task UpdateCity(City city);
 
         Task DeleteCity(int cityId);

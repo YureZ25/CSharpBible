@@ -45,13 +45,21 @@ namespace AdoNet.Controllers
             return Ok(connection.State.ToString());
         }
 
-        [HttpGet("/Home/Edit/{cityId}")]
-        public async Task<IActionResult> Edit([FromRoute] int cityId)
+        [HttpPost]
+        public async Task<IActionResult> Add([FromForm] string cityName)
         {
-            return View(await _cityProvider.GetCity(cityId));
+            await _cityProvider.InsertCity(cityName);
+
+            return Redirect("/");
         }
 
-        [HttpPost("/Home/Edit")]
+        [HttpGet]
+        public async Task<IActionResult> Edit([FromRoute] int id)
+        {
+            return View(await _cityProvider.GetCity(id));
+        }
+
+        [HttpPost]
         public async Task<IActionResult> Edit([FromForm] City city)
         {
             await _cityProvider.UpdateCity(city);
@@ -59,10 +67,10 @@ namespace AdoNet.Controllers
             return Redirect("/");
         }
 
-        [HttpPost("/Home/Delete/{cityId}")]
-        public async Task<IActionResult> Delete([FromRoute] int cityId)
+        [HttpPost]
+        public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            await _cityProvider.DeleteCity(cityId);
+            await _cityProvider.DeleteCity(id);
 
             return Redirect("/");
         }

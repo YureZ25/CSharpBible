@@ -71,6 +71,32 @@ namespace AdoNet.Model.Providers
             return null; // Если ничего не нашли - возвращаем пустоту
         }
 
+        public async Task<City> InsertCity(string cityName)
+        {
+            using (var connection = _connectionFactory.CreateConnection())
+            {
+                var command = new SqlCommand("INSERT INTO Cities (CityName) VALUES (@cityName); SET @cityId = SCOPE_IDENTITY()", connection);
+
+                command.Parameters.AddWithValue("@cityName", cityName);
+
+                var cityId = new SqlParameter
+                {
+                    ParameterName = "@cityId",
+                    SqlDbType = System.Data.SqlDbType.Int,
+                    Direction = System.Data.ParameterDirection.Output,
+                };
+                command.Parameters.Add(cityId);
+
+                await command.ExecuteNonQueryAsync();
+
+                return new City
+                {
+                    CityId = (int)cityId.Value,
+                    CityName = cityName,
+                };
+            }
+        }
+
         public async Task UpdateCity(City city)
         {
             using (var connection = _connectionFactory.CreateConnection())
