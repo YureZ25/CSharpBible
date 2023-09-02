@@ -75,10 +75,13 @@ namespace AdoNet.Model.Providers
         {
             using (var connection = _connectionFactory.CreateConnection())
             {
+                // Так тоже можно создавать комманду
+                // Для возврата id пользуемся встроеной в MS SQL функцией SCOPE_IDENTITY()
                 var command = new SqlCommand("INSERT INTO Cities (CityName) VALUES (@cityName); SET @cityId = SCOPE_IDENTITY()", connection);
 
                 command.Parameters.AddWithValue("@cityName", cityName);
 
+                // Создаем выходной параметр и в SQL присваеваем его
                 var cityId = new SqlParameter
                 {
                     ParameterName = "@cityId",
@@ -91,7 +94,7 @@ namespace AdoNet.Model.Providers
 
                 return new City
                 {
-                    CityId = (int)cityId.Value,
+                    CityId = (int)cityId.Value, // После выполнения запроса можно взять значение параметра
                     CityName = cityName,
                 };
             }

@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
 
+// Внежряем нужную нам зависимость
 builder.Services.AddScoped<ICityProvider, CityProvider>();
+//builder.Services.AddScoped<ICityProvider, DapperCityProvider>();
 
 builder.Services.AddControllersWithViews();
 
