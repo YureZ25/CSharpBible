@@ -1,0 +1,26 @@
+﻿@model PersonVM
+
+@{
+    ViewData["Title"] = "Редактирование пользователя";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-controller="Person" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Имя</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Возраст</label>
+        <input asp-for="Age" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-secondary">Сохранить</button>
+    </div>
+</form>
+
+<div>
+    <a asp-controller="Person" asp-action="Index">Вернутся к списку</a>
+</div>

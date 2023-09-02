@@ -1,0 +1,30 @@
+﻿@model IEnumerable<PersonVM>
+
+@{
+    ViewData["Title"] = "Список пользователя";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-controller="Person" asp-action="Add">Добавить</a>
+</p>
+<table class="table">
+    <tr>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th></th>
+    </tr>
+    @foreach (var person in Model)
+    {
+        <tr>
+            <td>@person.Name</td>
+            <td>@person.Age</td>
+            <td>
+                <a asp-controller="Person" asp-action="Edit" asp-route-id="@person.Id">Изменить</a>
+                |
+                <a asp-controller="Person" asp-action="Remove" asp-route-id="@person.Id">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>
