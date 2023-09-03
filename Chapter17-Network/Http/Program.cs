@@ -1,9 +1,14 @@
 ﻿using System.Net;
 using System.Text;
+using System.Web;
+
+string url = "https://www.flenov.info/search/index?search=csharp";
+
+ParseUrl();
 
 // Два метода - один на устаревшем клиенте, другой на актуальном
 var body = await GetPageWebClient(false);
-//var body = await GetPageHttpClient();
+//var body = await GetPageHttpClient(false);
 
 Console.WriteLine("Был прочитано такое тело ответа:");
 Console.WriteLine(body);
@@ -11,8 +16,6 @@ Console.WriteLine(body);
 // Тут используется устаревший класс WebRequest
 async Task<string> GetPageWebClient(bool useProxy)
 {
-    string url = "http://flenov.info";
-
     HttpWebResponse response;
     try // Тут могут быть различные исключения
     {
@@ -62,8 +65,6 @@ async Task<string> GetPageWebClient(bool useProxy)
 // На актуальном HttpClient все выгдядит лучше
 async Task<string> GetPageHttpClient()
 {
-    string url = "http://flenov.info";
-
     var handler = new HttpClientHandler // Объект настройки HttpClient
     {
         Proxy = new WebProxy("192.168.0.1", 8080),
@@ -84,4 +85,35 @@ async Task<string> GetPageHttpClient()
     Console.WriteLine($"Статус ответа: {response.StatusCode}");
 
     return await response.Content.ReadAsStringAsync(); // Читаем как строку
+}
+
+void ParseUrl()
+{
+    var uri = new Uri(url);
+
+    Console.WriteLine($"Хост: {uri.Host}");
+    Console.WriteLine($"Путь к странице на хосте: {uri.AbsolutePath}");
+    Console.WriteLine($"Путь с параметрами: {uri.PathAndQuery}");
+    Console.WriteLine($"Параметры: {uri.Query}");
+    Console.WriteLine($"Пусть к странице по частям: {string.Join(", ", uri.Segments.Select(s => $"[\"{s}\"]"))}");
+    
+    // Параметры легко можно спарсить с помощью этого хелпера
+    //Console.WriteLine($"Параметры по частям: {HttpUtility.ParseQueryString(uri.Query)}");
+    // Но если сильно хочется, можно создать свою имплементацию
+    Console.WriteLine($"Параметры по частям: {string.Join(", ", ParseQuery(uri.Query).Select(p => $"[\"{p.Key}\"]: \"{p.Value}\""))}");
+
+    Dictionary<string, string> ParseQuery(string query)
+    {
+        var queryParams = new Dictionary<string, string>();
+
+        query = query.Substring(1, query.Length - 1);
+
+        foreach (var param in query.Split('&'))
+        {
+            var paramKeyAndValue = param.Split('=');
+            queryParams.Add(paramKeyAndValue[0], paramKeyAndValue[1]);
+        }
+
+        return queryParams;
+    }
 }
