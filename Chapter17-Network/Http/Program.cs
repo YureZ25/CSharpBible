@@ -2,14 +2,14 @@
 using System.Text;
 
 // Два метода - один на устаревшем клиенте, другой на актуальном
-var body = await GetPageWebClient();
+var body = await GetPageWebClient(false);
 //var body = await GetPageHttpClient();
 
 Console.WriteLine("Был прочитано такое тело ответа:");
 Console.WriteLine(body);
 
 // Тут используется устаревший класс WebRequest
-async Task<string> GetPageWebClient()
+async Task<string> GetPageWebClient(bool useProxy)
 {
     string url = "http://flenov.info";
 
@@ -17,6 +17,14 @@ async Task<string> GetPageWebClient()
     try // Тут могут быть различные исключения
     {
         var request = HttpWebRequest.Create(url); // Создаем абстрактный класс WebRequest (в котором по факту будет экземпляр HttpWebRequest)
+        
+        if (useProxy)
+        {
+            var proxy = new WebProxy("192.168.0.1", 8080); // Создаем прокси
+            proxy.Credentials = new NetworkCredential("userName", "password"); // Задаем креды
+            request.Proxy = proxy; // Назначаем запросу, теперь он знает про прокси и будет направлен корректно
+        }
+        
         response = (HttpWebResponse)await request.GetResponseAsync(); // Тут по факту просиходит загрузка страницы
     }
     catch (Exception ex)
@@ -56,7 +64,13 @@ async Task<string> GetPageHttpClient()
 {
     string url = "http://flenov.info";
 
-    var client = new HttpClient(); // Создаем клиент
+    var handler = new HttpClientHandler // Объект настройки HttpClient
+    {
+        Proxy = new WebProxy("192.168.0.1", 8080),
+        DefaultProxyCredentials = new NetworkCredential("userName", "password")
+    };
+
+    var client = new HttpClient(handler); // Создаем клиент
     
     var response = await client.GetAsync(url); // Посылаем запрос и получаем ответ
 
