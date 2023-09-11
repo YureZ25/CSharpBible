@@ -106,12 +106,10 @@ void ParseUrl()
     {
         var queryParams = new Dictionary<string, string>();
 
-        query = query.Substring(1, query.Length - 1);
-
-        foreach (var param in query.Split('&'))
+        foreach (var param in query[1..].Split('&'))
         {
             var paramKeyAndValue = param.Split('=');
-            queryParams.Add(paramKeyAndValue[0], paramKeyAndValue[1]);
+            queryParams.Add(paramKeyAndValue[0], paramKeyAndValue.Length > 1 ? paramKeyAndValue[1] : null);
         }
 
         return queryParams;
