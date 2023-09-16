@@ -9,13 +9,10 @@ namespace ClientServer
         private const int bufferSize = 1024;
         private byte[] buffer = new byte[bufferSize];
 
-        public Socket ClientSocket { get; private set; }
         public IPEndPoint EndPoint { get; private set; }
 
         public Client()
         {
-            ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
             Console.WriteLine("Введите IP адрес сервера:");
             if (!IPAddress.TryParse(Console.ReadLine(), out var address))
             {
@@ -25,44 +22,46 @@ namespace ClientServer
             EndPoint = new IPEndPoint(address, 8888);
         }
 
-        private async Task Start()
+        private async Task<Socket> Start()
         {
             Console.WriteLine("Подключаемся к серверу...");
 
+            var clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
             try
             {
-                await ClientSocket.ConnectAsync(EndPoint);
+                await clientSocket.ConnectAsync(EndPoint);
             }
             catch (Exception ex)
             {
                 throw new ApplicationException($"Ошибка соединения с сервером: {ex.Message}", ex);
             }
 
-            Console.WriteLine($"Подключение к {ClientSocket.RemoteEndPoint} установлено");
+            Console.WriteLine($"Подключение к {clientSocket.RemoteEndPoint} установлено");
+
+            return clientSocket;
         }
 
         public void Stop()
         {
-            ClientSocket.Close();
+            EndPoint = null;
         }
 
         public async Task SendMessage(string message)
         {
-            await Start();
+            using var clientSocket = await Start();
 
-            Console.WriteLine($"Передача сообщения на сервер {ClientSocket.RemoteEndPoint}");
-            await ClientSocket.SendAsync(Encoding.UTF8.GetBytes(message), SocketFlags.None);
+            Console.WriteLine($"Передача сообщения на сервер {clientSocket.RemoteEndPoint}");
+            await clientSocket.SendAsync(Encoding.UTF8.GetBytes(message), SocketFlags.None);
 
-            Console.WriteLine($"Прием ответа с сервера {ClientSocket.RemoteEndPoint}");
-            var length = await ClientSocket.ReceiveAsync(buffer, SocketFlags.None);
+            Console.WriteLine($"Прием ответа с сервера {clientSocket.RemoteEndPoint}");
+            var length = await clientSocket.ReceiveAsync(buffer, SocketFlags.None);
 
             if (length > 0)
             {
                 var response = Encoding.UTF8.GetString(buffer, 0, length);
-                Console.WriteLine($"Принят ответ '{response}' с сервера {ClientSocket.RemoteEndPoint}");
+                Console.WriteLine($"Принят ответ '{response}' с сервера {clientSocket.RemoteEndPoint}");
             }
-
-            await ClientSocket.DisconnectAsync(true);
         }
     }
 }
